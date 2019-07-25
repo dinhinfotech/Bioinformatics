@@ -9,7 +9,7 @@ import numpy as np
 
 def list_files_in_folder(folder_path):    
     """
-    Return: A list of the file names in the folder
+    Return: A list which contains all file names in the folder
     """
           
     list = listdir(folder_path)
