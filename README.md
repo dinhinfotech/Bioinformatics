@@ -1,7 +1,7 @@
-This repository contains the implementation of DiGI method which is proposed in the paper entitled "Heterogeneous Networks 
-Integration for Disease Gene Prioritization with Node Kernels", submitted to Bioinformatics journal.
+**DiGI**
+Given a list of genes known to be associated to a genetic diease, DiGI aims at ranking the candidate genes in the descending order according to their probabilities of being realated to that disease.
 
-Dependency:
+**Dependency:**
 - Python: >= 2.7
 - EDeN: https://github.com/fabriziocosta/EDeN.git
 
