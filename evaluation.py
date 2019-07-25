@@ -21,6 +21,7 @@ class Validation():
 
 
     def select_parameters(self, training_genes=None, training_labels=None):
+        """Model selection"""
         
         list_c = [10e-4, 10e-3, 10e-2, 10e-1, 1, 10e+1, 10e+2, 10e+3, 10e+4]
         
