@@ -33,7 +33,7 @@ class CDNK_Vectorizer():
     def vectorize(self, g):
         """ Vectorize graph nodes
         
-        Return: matrix in which rows are the vectors that represents for nodes        
+        Return: a matrix in which rows are the vectors that represents for nodes        
         """
         
         vec = Vectorizer(nbits=self.nbits, 
