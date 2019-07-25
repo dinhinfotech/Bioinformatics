@@ -5,7 +5,7 @@ import util
 def create_graphs(adjacency_folder_path=None):
     """
     Parameters:
-    - file_path: path to adjacency matrix
+    - file_path: path to adjacency matrices
     - start_ID: Starting ID for graph nodes
     
     Return: An undirected, unweighted graph
