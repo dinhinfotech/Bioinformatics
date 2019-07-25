@@ -36,7 +36,7 @@ def main(args):
     training_labels = [int(l) for l in util.load_list_from_file(training_labels_file)]
     all_genes = util.load_list_from_file(all_genes_file)
 
-    # Creating graphs
+    # Creating list of graphs
     graphs = gu.create_graphs(adjacency_folder_path=adjacency_folder)
     
     # Computing kernel matrices
