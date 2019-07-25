@@ -1,6 +1,6 @@
 **DiGI**
 
-Given a list of genes known to be associated to a genetic diease, DiGI aims at ranking the candidate genes in the descending order according to their probabilities of being realated to that disease.
+This repository consists of the data and source code which are used evaluate the performances of the DiGI method proposed in the paper entitled "Heterogeneous Networks Integration for Disease Gene Prioritization with Node Kernels", submitted to Bioinformatics journal. 
 
 **Dependency:**
 - Python >= 2.7
