@@ -26,6 +26,12 @@ def load_list_from_file(file_path):
     f.close()
     return listlines
 
+def save_list_to_file(file_path=None, list_to_save=None):
+    f = open(file_path, 'w')
+    f.writelines([line + "\n" for line in list_to_save])
+    f.close()
+
+
 def load_matrices(folder_path):
     """
     Return: A list of matrices saved in the folder
