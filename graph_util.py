@@ -2,6 +2,7 @@ import networkx as nx
 import numpy as np
 import util
 
+
 def create_graphs(adjacency_folder_path=None):
     """
     Parameters:
@@ -31,7 +32,8 @@ def create_graphs(adjacency_folder_path=None):
         start_ID+= start_ID + N
             
     return graphs
-    
+
+
 def kcore_decompose(g=None, deg_threshold=None, cli_threshold=None, max_node_ID=None):
     """
     Parameters:
@@ -68,7 +70,6 @@ def kcore_decompose(g=None, deg_threshold=None, cli_threshold=None, max_node_ID=
         m = min(g_high_degree0.degree().values())
         t = max(deg_threshold,m)
         
-        
         for n in g_high_degree0.nodes():      
             if len(g_high_degree0.neighbors(n)) > t:                   
                 high_degree_nodes.append(n)
@@ -82,7 +83,6 @@ def kcore_decompose(g=None, deg_threshold=None, cli_threshold=None, max_node_ID=
 
         clique_decompose(g_low_degree, max_node_ID, cli_threshold, dict_newnode_clinodes,remove_edges)
 
-        
         g_union = nx.union(g_union, g_low_degree)
         
         g_high_degree0 = g_high_degree
@@ -101,14 +101,13 @@ def kcore_decompose(g=None, deg_threshold=None, cli_threshold=None, max_node_ID=
     g_union.remove_edges_from(clique_edges)
     g_union.remove_edges_from(remove_edges)
     return [g_union, dict_newnode_clinodes]  
-    
+
+
 def clique_decompose(g, max_node_ID, cli_threshold, dict_newnode_clinodes, remove_edges):
     """
     Clique decomposition
     """    
     list_cliques = [cli for cli in nx.find_cliques(g) if len(cli) > cli_threshold]
-    
-
     new_node_IDs = []
     nesting_edges = []
     new_edges = []    
@@ -129,7 +128,8 @@ def clique_decompose(g, max_node_ID, cli_threshold, dict_newnode_clinodes, remov
     g.add_nodes_from(new_node_IDs, label="")
     g.add_edges_from(nesting_edges, label="", nesting ='True')
     g.add_edges_from(new_edges, label="")
-    
+
+
 def union_graphs(graphs=None, deg_threshold=None, cli_threshold=None): 
     """Decompose a list of graphs by using kcore and clique techniques
      
@@ -156,7 +156,6 @@ def union_graphs(graphs=None, deg_threshold=None, cli_threshold=None):
     or_edges0 = set(nx.get_edge_attributes(new_graphs[0],'nesting').keys())
     and_edges0 = set(new_graphs[0].edges()) - or_edges0    
     node0 = set(new_graphs[0].nodes())
-  
 
     for g in new_graphs[1:]:
         or_edges1 = set(nx.get_edge_attributes(g,'nesting').keys())

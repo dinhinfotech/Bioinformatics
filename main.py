@@ -1,36 +1,20 @@
-"""
-Usage:
-  evaluation -a <folder> -t <file> -l <file> -C <list> -D <list> -d <list> -r <list>
-              
-
-Options:
-    -a <folder>                 Specify folder which contains adjacency matrices
-    -t <file>                   Specify file which contains list of training genes
-    -l <file>                   Specify file which contains list of training labels
-    -g <file>                   Specify file which contains list of all labels    
-    -D <list>                   List of degree thresholds    
-    -C <list>                   List of clique thresholds
-    -d <list>                   List of maximal distances
-    -r <list>                   List of maximal radiuses
-  
-"""
- 
-from docopt import docopt
+import argparse
 import graph_util as gu
 import graph 
 import util
 from evaluation import Validation
 
+
 def main(args):
     
-    adjacency_folder = args['-a']    
-    training_genes_file = args['-t']    
-    training_labels_file = args['-l']
-    all_genes_file = args['-g']
-    list_D = [int(c) for c in args['-D'].rsplit(',')]    
-    list_C = [int(c) for c in args['-C'].rsplit(',')]
-    list_d = [int(c) for c in args['-d'].rsplit(',')]
-    list_r = [int(c) for c in args['-r'].rsplit(',')]
+    adjacency_folder = args.adj_folder
+    training_genes_file = args.train_genes_file
+    training_labels_file = args.train_labels_file
+    all_genes_file = args.all_genes_file
+    list_D = args.list_D
+    list_C = args.list_C
+    list_d = args.list_d
+    list_r = args.list_r
     
     training_genes = util.load_list_from_file(training_genes_file)
     training_labels = [int(l) for l in util.load_list_from_file(training_labels_file)]
@@ -54,14 +38,23 @@ def main(args):
     
     auc = val.validation()
     
-    print auc
+    print(auc)
+
 
 if __name__ == '__main__':
-    args = docopt(__doc__)
-    main(args)    
-    
-    
-    
+    parser = argparse.ArgumentParser(description='GCN')
+    parser.add_argument("--adj_folder", type=str, default="", help="path to adjacency folder")
+    parser.add_argument("--train_genes_file", type=str, default="", help="path to the file containing train gene list")
+    parser.add_argument("--train_labels_file", type=str, default="", help="path to the file containing train label list")
+    parser.add_argument("--all_genes_file", type=str, default="", help="path to the file containing all gene list")
+    parser.add_argument("--list_D", type=int, nargs='+', help="List of degree thresholds")
+    parser.add_argument("--list_C", type=int, nargs='+', help="List of clique thresholds")
+    parser.add_argument("--list_d", type=int, nargs='+', help="List of maximum distance parameter in CDNK")
+    parser.add_argument("--list_r", type=int, nargs='+', help="List of maximum radiua parameter in CDNK")
+    args = parser.parse_args()
+
+    print(args)
+    main(args)
     
                     
     
