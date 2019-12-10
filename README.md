@@ -18,7 +18,7 @@ There are different sub-folders in the Data folder which contain the data used f
 
 **How to run DiGI**
 
-Under the root directory of this repository, run the main.py with papameters. Following is an example how to run our model using test data:
+Under the root directory of this repository, run the main.py with papameters' values. Following is an example how to run our model using test data:
 
 > **_python main.py\  
 --adj_folder data/test_data/adj_matrices\  
