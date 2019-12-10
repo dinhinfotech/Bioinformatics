@@ -5,13 +5,15 @@ This repository consists of the data and source code which are used to evaluate 
 DiGI is also implemented as a web tool and it is available at: http://rna.informatik.uni-freiburg.de/DiGI/Input.jsp
 
 **Dependency**
-> **_- Python >= 2.7
+
+- Python >= 2.7
 - scikit-learn >= 0.17.1
 - networkx >= 2.2
 - scipy >= 1.3.0
-- EDeN: https://github.com/fabriziocosta/EDeN.git_**
+- EDeN: https://github.com/fabriziocosta/EDeN.git
 
 **Data**
+
 There are different sub-folders in the Data folder which contain the data used for different experimental setting in the paper. Besides, you can find the test data in the "test_data" sub-folder which is used for a quick run test.
 
 **How to run DiGI**
