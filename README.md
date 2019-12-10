@@ -15,13 +15,13 @@ DiGI is also implemented as a web tool and it is available at: http://rna.inform
 
 Under the root directory of this repository, run the main.py. Following is an example:
 
-python main.py --adj_folder data/toy_data/adj_matrices\\
-               --train_genes_file data/toy_data/train_genes\\
-               --train_labels_file data/toy_data/train_labels\\
-               --all_genes_file data/toy_data/all_genes\\
-               --list_D 10 15\\
-               --list_C 5\\
-               --list_d 1 2\\
+python main.py --adj_folder data/toy_data/adj_matrices'\
+               --train_genes_file data/toy_data/train_genes\
+               --train_labels_file data/toy_data/train_labels\
+               --all_genes_file data/toy_data/all_genes\
+               --list_D 10 15\
+               --list_C 5\
+               --list_d 1 2\
                --list_r 1 2
 
 
