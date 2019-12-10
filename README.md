@@ -10,8 +10,8 @@ DiGI is also implemented as a web tool and it is available at: http://rna.inform
 - scikit-learn >= 0.17.1
 - networkx >= 2.2
 - scipy >= 1.3.0
-- EDeN: https://github.com/fabriziocosta/EDeN.git
-_**
+- EDeN: https://github.com/fabriziocosta/EDeN.git_**
+
 **Data**
 There are different sub-folders in the Data folder which contain the data used for different experimental setting in the paper. Besides, you can find the test data in the "test_data" sub-folder which is used for a quick run test.
 
