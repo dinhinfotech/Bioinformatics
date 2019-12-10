@@ -12,11 +12,11 @@ DiGI is also implemented as a web tool and it is available at: http://rna.inform
 - EDeN: https://github.com/fabriziocosta/EDeN.git
 
 **Data**
-There are different sub-folders in the Data folder which contain the data from different experimental setting used in our paper. Besides, you can find the test data in the "test_data" sub-folder which is used for a quick run test.
+There are different sub-folders in the Data folder which contain the data used for different experimental setting in the paper. Besides, you can find the test data in the "test_data" sub-folder which is used for a quick run test.
 
 **How to run DiGI**
 
-Under the root directory of this repository, run the main.py. Following is an example with a test data:
+Under the root directory of this repository, run the main.py with papameters. Following is an example how to run our model using test data:
 
 python main.py\  
 --adj_folder data/test_data/adj_matrices\  
