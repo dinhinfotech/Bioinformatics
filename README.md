@@ -15,7 +15,7 @@ DiGI is also implemented as a web tool and it is available at: http://rna.inform
 
 Under the root directory of this repository, run the main.py. Following is an example with a test data:
 
-python main.py \  
+python main.py\  
 --adj_folder data/test_data/adj_matrices\\  
 --train_genes_file data/test_data/train_genes\\  
 --train_labels_file data/test_data/train_labels\\  
