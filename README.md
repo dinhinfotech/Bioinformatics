@@ -29,6 +29,6 @@ Under the root directory of this repository, run the main.py with papameters' va
 --list_C 5 \  
 --list_d 1 2 \    
 --list_r 1 2 \  
-----use_lou_**
+--use_lou_**
 
 
