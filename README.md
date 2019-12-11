@@ -20,14 +20,14 @@ There are different sub-folders in the Data folder which contain the data used f
 
 Under the root directory of this repository, run the main.py with papameters' values. Following is an example how to run our model using test data:
 
-> **_python main.py\  
---adj_folder data/test_data/adj_matrices\  
---train_genes_file data/test_data/train_genes\  
---train_labels_file data/test_data/train_labels\  
---all_genes_file data/test_data/all_genes\  
---list_D 10 15\  
---list_C 5\  
---list_d 1 2\  
+> **_python main.py \  
+--adj_folder data/test_data/adj_matrices \  
+--train_genes_file data/test_data/train_genes \  
+--train_labels_file data/test_data/train_labels \  
+--all_genes_file data/test_data/all_genes \  
+--list_D 10 15 \  
+--list_C 5 \  
+--list_d 1 2 \  
 --list_r 1 2_**
 
 
