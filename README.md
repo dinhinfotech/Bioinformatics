@@ -14,7 +14,7 @@ DiGI is also implemented as a web tool and it is available at: http://rna.inform
 
 **Data**
 
-There are different sub-folders in the Data folder which contain the data used for different experimental setting in the paper. Besides, you can find the test data in the "test_data" sub-folder which is used for a quick run test.
+There are different sub-folders in the Data folder which contain the data used for different experimental setting in the paper. Besides, you can find the test data in the "test_data" sub-folder which is used for a quick test run.
 
 **How to run DiGI**
 
@@ -27,7 +27,8 @@ Under the root directory of this repository, run the main.py with papameters' va
 --all_genes_file data/test_data/all_genes \  
 --list_D 10 15 \  
 --list_C 5 \  
---list_d 1 2 \  
---list_r 1 2_**
+--list_d 1 2 \    
+--list_r 1 2 \  
+----use_lou_**
 
 
